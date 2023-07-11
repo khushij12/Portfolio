@@ -17,6 +17,5 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "vite": "^4.3.9"
-  },
-  "homepage": "https://khushij12.github.io/Portfolio/"
+  }
 }
