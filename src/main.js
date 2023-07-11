@@ -10,4 +10,4 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 // import { VividTyping } from 'vivid-typing'
 
 // createApp(App).component('VividTyping', VividTyping).mount('#app')
-create(App).mount('#app')
+createApp(App).mount('#app')
