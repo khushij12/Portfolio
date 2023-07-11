@@ -1,0 +1,17 @@
+name: Set NODE_ENV
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+jobs:
+  set-env:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository contents
+      uses: actions/checkout@v2
+
+    - name: Set NODE_ENV
+      run: echo "NODE_ENV=production" >> $GITHUB_ENV
