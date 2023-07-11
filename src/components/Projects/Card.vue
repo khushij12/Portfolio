@@ -1,13 +1,13 @@
 <script setup>
 const props = defineProps(['name', 'desc', 'link', 'image-link']);
-const image = new URL(`../../assets/`+props['imageLink'],import.meta.url);
+const image = new URL(`../../assets/${props['imageLink']}`,import.meta.url).href;
 </script>
 
 <template>
     <a :href="props.link">
     <div class="card">
         <p class="card-title">{{ props.name }}</p>
-        <div class="card-image" :style="{'background-image':'url('+image+')'}"></div>
+        <div class="card-image" ><img :src="image" /></div>
         <div class="card-link"></div>
         <p class="card-desc">{{ props.desc }}</p>
         <!-- <p>{{ props.link }}</p> -->
@@ -47,15 +47,17 @@ img {
 }
 
 .card-image{
-/*     background-image: v-bind("image"); */
-    background-size: cover;
-    background-position: 12%;
     height: 160px;
     border-radius: 15px;
     width: 380px;
     margin: auto;
-    z-index: 23;
-    position: relative;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 .card-desc{
     font-size: 15px;

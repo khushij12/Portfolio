@@ -1,5 +1,6 @@
 <script setup>
 import links from "../../constants/links";
+import Tab from "./Tab.vue";
 </script>
 <template>
     <div class="contact">
@@ -7,17 +8,17 @@ import links from "../../constants/links";
             Let's connect
         </div>
         <div class="as">
-        <div class="contact-body">
+            <div class="contact-body">
 
-            <div v-for="link in links" class="contact-content">
-                <a :href="link.url" target="_blank"><img :src="link.logo" /></a>
+                <div v-for="link in links" class="contact-content">
+                    <Tab :url="link.url" :logo="link.logo" />
+                </div>
+
             </div>
-            
-        </div>
-        <!-- <div class="asd">
+            <!-- <div class="asd">
             <img src="../../assets/F2.png" width="180" height="280"/>
         </div> -->
-    </div>
+        </div>
     </div>
 </template>
 <style scoped>
@@ -53,15 +54,6 @@ import links from "../../constants/links";
     filter: none;
 }
 
-a {
-    background-color: white;
-    text-decoration: none;
-}
-
-a::after {
-    background-color: white;
-    text-decoration: none;
-}
 
 /* .contact-content: {
 
@@ -77,16 +69,18 @@ a::after {
     height: 300px;
     border-radius: 25px;
     background: #FFF;
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-/* border: 1px solid rgba(255, 255, 255, 0.3); */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
-.asd{
+
+.asd {
     padding: 40px 20px;
 }
-.as{
+
+.as {
     display: flex;
     flex-direction: row;
     gap: 450px;

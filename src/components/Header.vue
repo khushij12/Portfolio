@@ -1,6 +1,5 @@
 <script setup>
 import Links from './ThemeElement/Links.vue';
-import Character from "../assets/Character.vue";
 </script>
 
 <template>
