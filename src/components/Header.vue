@@ -34,7 +34,6 @@ import Character from "../assets/Character.vue";
 <script>
 
 function scroll(className) {
-    console.log(document.querySelector("." + className));
     document.querySelector("." + className).scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
 }
 </script>
