@@ -2,7 +2,8 @@
 import projects from "../../constants/projects";
 import Card from "./Card.vue";
 import SearchBar from "./Search.vue";
-const colors = [[98, 215, 198],[177, 132, 239],[234,52,104], [193,153,86], [142,154,79]];
+
+const colors = [[98, 215, 198],[177, 132, 239], [193,153,86], [142,154,79]];
 </script>
 <script>
 export default {

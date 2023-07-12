@@ -25,7 +25,9 @@ import Tab from "./Tab.vue";
 .contact {
     min-height: 85vh;
     padding: 50px 100px;
-    background-color: #100123;
+    background-image: url("../../assets/Contact.png");
+    background-size: cover;
+    background-position: 12%;
     color: white;
     scroll-margin: 20px;
 }
