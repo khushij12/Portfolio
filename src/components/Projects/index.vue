@@ -2,6 +2,7 @@
 import projects from "../../constants/projects";
 import Card from "./Card.vue";
 import SearchBar from "./Search.vue";
+const colors = [[98, 215, 198],[177, 132, 239],[234,52,104], [193,153,86], [142,154,79]];
 </script>
 <script>
 export default {
@@ -23,7 +24,7 @@ export default {
         
         <div class="proj-content">
             <div v-for="project in projects" class="proj-content-single">
-                <Card :name="project.name" :desc="project.desc" :link="project.link" :image-link="project.imageLink"/>
+                <Card :name="project.name" :techStack="project.techStack" :desc="project.desc" :link="project.link" :image-link="project.imageLink" :color="colors[Math.floor(Math.random()*colors.length)]"/>
             </div>
         </div>
     </div>
