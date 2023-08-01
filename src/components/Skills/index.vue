@@ -18,7 +18,7 @@ import Rating from "./Rating.vue";
 
             </div>
 
-            <div class="skill-content-box">
+            <!-- <div class="skill-content-box">
                 <span>{{ 'Mobile Development' }}</span>
                 <div v-for="skill of Object.entries(Skill['Mobile Development'])" class="skill-content-box-content">
                     {{ skill[1].name }}
@@ -26,7 +26,7 @@ import Rating from "./Rating.vue";
                     <Rating :rating="skill[1].rating" />
                 </div>
 
-            </div>
+            </div> -->
             <div class="skill-content-box">
 
                 <span>{{ 'Databases' }}</span>
@@ -37,8 +37,8 @@ import Rating from "./Rating.vue";
 
             </div>
             <div class="skill-content-box">
-                <span>{{ 'Spoken Language' }}</span>
-                <div v-for="skill of Object.entries(Skill['Spoken Language'])" class="skill-content-box-content">
+                <span>{{ 'Frontend Development' }}</span>
+                <div v-for="skill of Object.entries(Skill['Frontend Development'])" class="skill-content-box-content">
                     {{ skill[1].name }}
 
                     <Rating :rating="skill[1].rating" />
@@ -46,8 +46,8 @@ import Rating from "./Rating.vue";
 
             </div>
             <div class="skill-content-box">
-                <span>{{ 'Frontend Development' }}</span>
-                <div v-for="skill of Object.entries(Skill['Frontend Development'])" class="skill-content-box-content">
+                <span>{{ 'Spoken Language' }}</span>
+                <div v-for="skill of Object.entries(Skill['Spoken Language'])" class="skill-content-box-content">
                     {{ skill[1].name }}
 
                     <Rating :rating="skill[1].rating" />
@@ -91,12 +91,13 @@ import Rating from "./Rating.vue";
     gap: 10px;
 }
 
-.skill-content-box > span{
+.skill-content-box>span {
     font-size: 25px;
     font-weight: 600;
     color: #e896c0;
 }
-.skill-content-box-content{
+
+.skill-content-box-content {
     /* color: #e896c0; */
     font-size: 18px;
 }

@@ -1,21 +1,10 @@
-<script setup>
-const arr = ["Frontend Developer", "DSA Enthusiast", "Backend Developer", "Creative Art", "Fullstack Developer", "Problem Solving"];
-function styleFn(i) {
-    return `color:rgb(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255
-        });animation-delay:${i * 0.1}s;`
-}
-function AnimalstyleFn(i) {
-    return `color:rgb(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255
-        });animation-delay:${i * 0.05}s;margin:0 20px`
-}
-</script>
-
-
 <template>
     <div class="main">
-        <div class="intro"><span class="heading">Greetings and welcome to my portfolio! <br>Hi! I'm Khushi Jain.</span><br>
-            Frontend and backend developer? Oh, I've got both areas covered like a boss!</div>
-        <div><img src="../../assets/F!.png" width="120" height="160" /></div>
+        <div class="intro"><span class="heading"><b>Greetings and welcome to my portfolio! <br>Hi! I'm Khushi
+                    Jain</b>.</span><br>
+            <b style="font-size: 20px;">Frontend and backend developer? Oh, I've got both areas covered like a boss!</b>
+        </div>
+        <div class="dummy"><img src="../../assets/F!.png" width="120" height="160" /></div>
     </div>
 </template>
 
@@ -32,12 +21,48 @@ function AnimalstyleFn(i) {
     gap: 100px;
 }
 
+@keyframes entry {
+    0% {
+        transform: translate(-400px);
+    }
+}
+
 .intro {
     flex-basis: content;
+    animation: entry 1s ease-in 1;
 }
 
 .heading {
     font-size: 30px;
     color: #e896c0;
+}
+
+@keyframes dummyEntry {
+    0% {
+        transform: translateY(-300px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.dummy {
+    position: relative;
+    animation: dummyEntry 0.9s ease-in 1, jump 1.1s ease-out infinite;
 }
 </style>
