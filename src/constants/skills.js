@@ -16,11 +16,10 @@ const constants = {
     { name: "Material UI", rating: "3" },
     { name: "Tkinter", rating: "3" },
   ],
-  "Databases": [
+  Databases: [
     { name: "MongoDB", rating: "3" },
     { name: "MySQL", rating: "3" },
   ],
-  "Mobile Development": [{ name: "React Native", rating: "3" }],
   "Spoken Language": [
     { name: "English", rating: "3" },
     { name: "Hindi", rating: "3" },
@@ -29,3 +28,5 @@ const constants = {
 };
 
 export default constants;
+
+// "Mobile Development": [{ name: "React Native", rating: "3" }],
